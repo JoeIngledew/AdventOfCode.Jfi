@@ -1,6 +1,7 @@
 ﻿namespace AdventOfCode
 {
     using System;
+    using System.Diagnostics;
     using System.Runtime.InteropServices;
     using System.Text.RegularExpressions;
 
@@ -61,18 +62,43 @@
                     var numTimesStr = marker.Substring(indexOfXInMarker + 1, marker.Length - (indexOfXInMarker + 2));
                     var numTimesToRepeat = int.Parse(numTimesStr);
                     var patternToRepeat = input.Substring(i + (marker.Length), numCharsToRepeat);
+                    //Console.WriteLine($"{marker} - {patternToRepeat.Length}");
                     input = input.Remove(i, marker.Length);
                     for (var j = 0; j < numTimesToRepeat - 1; j++)
                     {
                         input = input.Insert(i, patternToRepeat);
                     }
-                    i += patternToRepeat.Length;
-                    Console.WriteLine($"{patternToRepeat} repeated {numTimesToRepeat} times [{marker}]");
-                    Console.WriteLine($"Iterator: {i}");
-                    Console.WriteLine($"Num chars: {input.Length}");
+                    i += (patternToRepeat.Length * (numTimesToRepeat )) - 1;
+                    //Console.WriteLine($"{patternToRepeat} repeated {numTimesToRepeat} times [{marker}]");
+                    //Console.WriteLine($"Iterator: {i}");
+                    // Console.WriteLine($"Num chars: {input.Length} i: {i}");
                 }
             }
             return input;
+        }
+
+        public string DecompressAndRecurse(string input, bool recurse)
+        {
+            var isMatch = Regex.IsMatch(input, "\\([0-9]+[x]{1}[0-9]+\\)");
+            var newInput = input;
+            string output = "";
+            int counter = 0;
+            while (isMatch)
+            {
+                Console.WriteLine($"Recursion: {counter}");
+                output = Decompress(newInput);
+                Console.WriteLine($"Looking for matches");
+                isMatch = Regex.IsMatch(output, "\\([0-9]+[x]{1}[0-9]+\\)");
+                Console.WriteLine($"Mathes left? {isMatch}");
+                if (isMatch)
+                {
+                    newInput = output;
+                }
+                Console.WriteLine($"Length: {newInput.Length}");
+                counter++;
+            }
+
+            return output;
         }
     }
 }

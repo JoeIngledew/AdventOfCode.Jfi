@@ -118,6 +118,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="RadioIsotopeThermoElectricGenerators.cs" />
     <Compile Include="SecurityThroughObscurity.cs" />
     <Compile Include="SignalsAndNoise.cs" />
     <Compile Include="Tests\AbacusTests.cs" />

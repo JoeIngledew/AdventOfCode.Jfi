@@ -34,12 +34,12 @@
 
         static void Main(string[] args)
         {
-            var lm = new LeonardoMonorail();
+            //var lm = new LeonardoMonorail();
 
-            lm.Execute(Resources.LeonardoMonorailInput);
+            //lm.Execute(Resources.LeonardoMonorailInput);
 
-            Console.WriteLine($"Val at register A: {lm.Registers["a"]}");
-            Console.ReadKey();
+            //Console.WriteLine($"Val at register A: {lm.Registers["a"]}");
+            //Console.ReadKey();
 
             //var bb = new BalanceBots();
 
@@ -49,11 +49,12 @@
             //Console.WriteLine($"Multiplied a chip in outputs 0, 1 and 2: {bb.GetMultiplyRes()}");
             //Console.ReadKey();
 
-            //var eic = new ExplosivesInCyberspace();
+            var eic = new ExplosivesInCyberspace();
 
-            //eic.Decompress(eicIn);
+            var outString = eic.DecompressAndRecurse(eicIn, true);
+            Console.WriteLine(outString.Length);
 
-            //Console.ReadLine();
+            Console.ReadLine();
 
             //var tfa = new TwoFactorAuth(6, 50);
 
