@@ -61,6 +61,23 @@ namespace AdventOfCode.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Alice would gain 2 happiness units by sitting next to Bob.
+        ///Alice would gain 26 happiness units by sitting next to Carol.
+        ///Alice would lose 82 happiness units by sitting next to David.
+        ///Alice would lose 75 happiness units by sitting next to Eric.
+        ///Alice would gain 42 happiness units by sitting next to Frank.
+        ///Alice would gain 38 happiness units by sitting next to George.
+        ///Alice would gain 39 happiness units by sitting next to Mallory.
+        ///Bob would gain 40 happiness units by sitting next to Alice.
+        ///Bob would l [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string DTHOActualIn {
+            get {
+                return ResourceManager.GetString("DTHOActualIn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to wxupppln
         ///ducindyd
         ///rhszlyfu

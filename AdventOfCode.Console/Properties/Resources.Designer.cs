@@ -61,6 +61,127 @@ namespace AdventOfCode.Console.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to bot 147 gives low to bot 67 and high to bot 71
+        ///bot 142 gives low to bot 128 and high to bot 164
+        ///bot 47 gives low to bot 4 and high to bot 209
+        ///bot 107 gives low to bot 194 and high to bot 103
+        ///bot 102 gives low to bot 82 and high to bot 3
+        ///bot 101 gives low to bot 46 and high to bot 111
+        ///value 23 goes to bot 76
+        ///bot 16 gives low to bot 203 and high to bot 32
+        ///bot 30 gives low to output 20 and high to bot 31
+        ///bot 170 gives low to bot 123 and high to bot 108
+        ///value 3 goes to bot 122
+        ///bot 176 gives low to bo [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string BalanceBotsInput {
+            get {
+                return ResourceManager.GetString("BalanceBotsInput", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Alice would gain 2 happiness units by sitting next to Bob.
+        ///Alice would gain 26 happiness units by sitting next to Carol.
+        ///Alice would lose 82 happiness units by sitting next to David.
+        ///Alice would lose 75 happiness units by sitting next to Eric.
+        ///Alice would gain 42 happiness units by sitting next to Frank.
+        ///Alice would gain 38 happiness units by sitting next to George.
+        ///Alice would gain 39 happiness units by sitting next to Mallory.
+        ///Bob would gain 40 happiness units by sitting next to Alice.
+        ///Bob would l [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string DTHOActualIn {
+            get {
+                return ResourceManager.GetString("DTHOActualIn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to wxupppln
+        ///ducindyd
+        ///rhszlyfu
+        ///kouqvpue
+        ///nwntizie
+        ///feyhuurg
+        ///qlgzsmya
+        ///svwijujv
+        ///tcmsiuly
+        ///vyrnynvz
+        ///nmidjjxd
+        ///ciduttzr
+        ///nofnijfo
+        ///ghskpifp
+        ///yoyvsxct
+        ///aqwzgouh
+        ///ihhkdayn
+        ///lmwyapsl
+        ///nxkdwnoq
+        ///hdkcvjrr
+        ///ecxvdbeg
+        ///sfybsvuu
+        ///gygvlghh
+        ///ivokuftm
+        ///grolarfj
+        ///tgzpjlca
+        ///lojlcrks
+        ///bmxogggc
+        ///iablmcem
+        ///cractnta
+        ///mpdrqxea
+        ///bdvrqbky
+        ///zymlyyyk
+        ///dhengvth
+        ///vrvvfnoo
+        ///ibemygpu
+        ///yjetqqrc
+        ///yhvpkxxc
+        ///rqfzoakw
+        ///uihcznsn
+        ///blovcrpx
+        ///dkrfqpco
+        ///xytyahwu
+        ///corlghco
+        ///gisliobo
+        ///qifxxizh
+        ///uykqywcf
+        ///pfnpbllg
+        ///kqcmwcsf
+        ///jgfujsse
+        ///klmgeozq
+        ///gp [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string SANActualIn {
+            get {
+                return ResourceManager.GetString("SANActualIn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to eedadn
+        ///drvtee
+        ///eandsr
+        ///raavrd
+        ///atevrs
+        ///tsrnev
+        ///sdttsa
+        ///rasrtv
+        ///nssdts
+        ///ntnada
+        ///svetve
+        ///tesnvt
+        ///vntsnd
+        ///vrdear
+        ///dvrsen
+        ///enarar.
+        /// </summary>
+        internal static string SANTestIn {
+            get {
+                return ResourceManager.GetString("SANTestIn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to vxupkizork-sgmtkzoi-pkrrehkgt-zxgototm-644[kotgr]
         ///mbiyqoxsm-pvygob-nocsqx-900[obmqs]
         ///veqtekmrk-ikk-hitpscqirx-334[nrtws]
@@ -75,9 +196,9 @@ namespace AdventOfCode.Console.Properties {
         ///oaxadrgx-pkq-abqdmfuaze-872[xtbnw]
         ///t [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string STOInput {
+        internal static string SecurityThroughObscurityIn {
             get {
-                return ResourceManager.GetString("STOInput", resourceCulture);
+                return ResourceManager.GetString("SecurityThroughObscurityIn", resourceCulture);
             }
         }
     }
