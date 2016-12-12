@@ -59,14 +59,14 @@
                     var indexOfXInMarker = marker.IndexOf('x');
                     var numCharsToRepeat = int.Parse(marker.Substring(1, indexOfXInMarker - 1));
                     var numTimesStr = marker.Substring(indexOfXInMarker + 1, marker.Length - (indexOfXInMarker + 2));
-                    var numTimesToRepeat =int.Parse(numTimesStr);
+                    var numTimesToRepeat = int.Parse(numTimesStr);
                     var patternToRepeat = input.Substring(i + (marker.Length), numCharsToRepeat);
                     input = input.Remove(i, marker.Length);
                     for (var j = 0; j < numTimesToRepeat - 1; j++)
                     {
                         input = input.Insert(i, patternToRepeat);
                     }
-                    i--;
+                    i += patternToRepeat.Length;
                     Console.WriteLine($"{patternToRepeat} repeated {numTimesToRepeat} times [{marker}]");
                     Console.WriteLine($"Iterator: {i}");
                     Console.WriteLine($"Num chars: {input.Length}");

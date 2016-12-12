@@ -70,6 +70,7 @@
     <Compile Include="ExplosivesInCyberspace.cs" />
     <Compile Include="HowAboutANiceGameOfChess.cs" />
     <Compile Include="IpVerSeven.cs" />
+    <Compile Include="LeonardoMonorail.cs" />
     <Compile Include="LightsToggle.cs" />
     <Compile Include="LookAndSay.cs" />
     <Compile Include="MoreLinq\MoreEnumerable.Acquire.cs" />

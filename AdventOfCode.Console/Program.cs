@@ -34,13 +34,20 @@
 
         static void Main(string[] args)
         {
-            var bb = new BalanceBots();
+            var lm = new LeonardoMonorail();
 
-            bb.Setup(Resources.BalanceBotsInput);
+            lm.Execute(Resources.LeonardoMonorailInput);
 
-            Console.WriteLine(bb.Execute());
-            Console.WriteLine($"Multiplied a chip in outputs 0, 1 and 2: {bb.GetMultiplyRes()}");
+            Console.WriteLine($"Val at register A: {lm.Registers["a"]}");
             Console.ReadKey();
+
+            //var bb = new BalanceBots();
+
+            //bb.Setup(Resources.BalanceBotsInput);
+
+            //Console.WriteLine(bb.Execute());
+            //Console.WriteLine($"Multiplied a chip in outputs 0, 1 and 2: {bb.GetMultiplyRes()}");
+            //Console.ReadKey();
 
             //var eic = new ExplosivesInCyberspace();
 
