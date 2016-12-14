@@ -1,6 +1,7 @@
 ﻿namespace AdventOfCode
 {
     using System.Collections.Generic;
+    using System.Drawing;
     using System.Globalization;
     using System.Linq;
     using System.Text.RegularExpressions;
@@ -48,8 +49,8 @@
             var relevantLights =
                 Lights.Where(
                     l =>
-                    l.LightPosition.XCoord >= startX && l.LightPosition.XCoord <= endX
-                    && l.LightPosition.YCoord >= startY && l.LightPosition.YCoord <= endY)
+                    l.LightPosition.X >= startX && l.LightPosition.X <= endX
+                    && l.LightPosition.Y >= startY && l.LightPosition.Y <= endY)
                 .ToList();
 
             if (singleInstruction.Contains("turn on"))
@@ -67,18 +68,18 @@
         }
     }
 
-    internal class Point
-    {
-        public Point(int x, int y)
-        {
-            XCoord = x;
-            YCoord = y;
-        }
-
-        public int XCoord { get; }
-
-        public int YCoord { get; }
-    }
+    //    internal class Point
+    //    {
+    //        public Point(int x, int y)
+    //        {
+    //            XCoord = x;
+    //            YCoord = y;
+    //        }
+    //
+    //        public int XCoord { get; }
+    //
+    //        public int YCoord { get; }
+    //    }
 
     internal class LightPoint
     {

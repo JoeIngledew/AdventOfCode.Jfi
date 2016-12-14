@@ -39,6 +39,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -64,7 +65,15 @@
     <Compile Include="BitwiseCircuit.cs" />
     <Compile Include="BitwiseWiring.cs" />
     <Compile Include="BlockDistanceCalculator.cs" />
+    <Compile Include="BreadthFirstSearch.cs" />
     <Compile Include="CodePad.cs" />
+    <Compile Include="CubicleMaze.cs" />
+    <Compile Include="CubicleMaze\Node.cs" />
+    <Compile Include="CubicleMaze\NodeState.cs" />
+    <Compile Include="CubicleMaze\PathFinder.cs" />
+    <Compile Include="CubicleMaze\Puzzle.cs" />
+    <Compile Include="CubicleMaze\SearchParameters.cs" />
+    <Compile Include="Day14\OneTimePad.cs" />
     <Compile Include="DinnerTableHappinessOptimizer.cs" />
     <Compile Include="ElevatorFloorCalc.cs" />
     <Compile Include="ExplosivesInCyberspace.cs" />

@@ -112,12 +112,14 @@
                 }
             }
             building[0][0] = elevator;
-            cargoList[0] = new Cargo(strontiumGenerator, 0); //
-            cargoList[1] = new Cargo(strontiumMicrochip, 1); // 
-            cargoList[2] = new Cargo(plutoniumGenerator, 0); //
-            cargoList[3] = new Cargo(plutoniumMicrochip, 1); //
             cargoList[4] = new Cargo(thuliumGenerator, 0); //
             cargoList[5] = new Cargo(thuliumMicrochip, 0); //
+            cargoList[0] = new Cargo(strontiumGenerator, 0); //
+            cargoList[2] = new Cargo(plutoniumGenerator, 0); //
+
+            cargoList[1] = new Cargo(strontiumMicrochip, 1); // 
+            cargoList[3] = new Cargo(plutoniumMicrochip, 1); //
+            
             cargoList[6] = new Cargo(rutheniumGenerator, 2); //
             cargoList[7] = new Cargo(rutheniumMicrochip, 2); //
             cargoList[8] = new Cargo(promethiumGenerator, 2); //
