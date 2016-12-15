@@ -74,6 +74,8 @@
     <Compile Include="CubicleMaze\Puzzle.cs" />
     <Compile Include="CubicleMaze\SearchParameters.cs" />
     <Compile Include="Day14\OneTimePad.cs" />
+    <Compile Include="Day15\ChineseRemainder.cs" />
+    <Compile Include="Day15\TimingIsEverything.cs" />
     <Compile Include="DinnerTableHappinessOptimizer.cs" />
     <Compile Include="ElevatorFloorCalc.cs" />
     <Compile Include="ExplosivesInCyberspace.cs" />

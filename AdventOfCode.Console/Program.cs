@@ -6,6 +6,7 @@
     using AdventOfCode.Console.Properties;
     using AdventOfCode.CubicleMaze;
     using AdventOfCode.Day14;
+    using AdventOfCode.Day15;
     using AdventOfCode.Properties;
 
     class Program
@@ -36,12 +37,27 @@
 
         static void Main(string[] args)
         {
-            var otp = new OneTimePad();
+            //var otp = new OneTimePad();
 
-            Console.WriteLine(otp.GetThisKey(64, "jlmsuwbz"));
-            //Console.WriteLine(otp.GetThisKey(64, "abc"));
-            Console.ReadKey();
+            //Console.WriteLine(otp.GetThisKey(65, "jlmsuwbz", 2016));
+            ////Console.WriteLine(otp.GetThisKey(64, "abc"));
+            //Console.ReadKey();
 
+            ChineseRemainder.Execute();
+            Console.ReadLine();
+
+            //            var tie = new TimingIsEverything();
+            //            tie.Setup(Resources.TimingIsEverthingIn);
+            ////            tie.Setup(@"Disc #1 has 5 positions; at time=0, it is at position 4.
+            ////Disc #2 has 2 positions; at time=0, it is at position 1.");
+            //            Console.WriteLine();
+            //            Console.WriteLine($"GOT IT AT TIME: {tie.PleaseWork()}");
+            //            Console.WriteLine();
+            //            Console.WriteLine($"RESETTING AND ADDING A NEW DISK");
+            //            tie.SecondSetup(11, 0);
+            //            Console.WriteLine();
+            //            Console.WriteLine($"GOT IT AT TIME: {tie.PleaseWork()}");
+            //            Console.ReadKey();
             //var cm = new Puzzle();
             //var size = 50;
             //cm.Setup(size, 1352);

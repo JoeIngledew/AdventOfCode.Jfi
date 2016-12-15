@@ -19,7 +19,7 @@
             _foundKeys = new List<CandidateKey>();
         }
 
-        public long GetThisKey(int numberToGet, string salt)
+        public long GetThisKey(int numberToGet, string salt, int stretchTimes)
         {
             int keysGenerated = 0;
             long index = 0;
@@ -29,18 +29,15 @@
             {
                 var hash = GenerateMd5Hash(index, salt);
 
+                hash = Enumerable.Range(0, stretchTimes).Aggregate(hash, (current, i) => GenerateMd5Hash(current));
+
                 var matches = new List<string>();
 
                 for (var i = 0; i < hash.Length - 2; i++)
                 {
-                    if (hash[i] == hash[i + 1] && hash[i] == hash[i + 2])
+                    if (hash[i] == hash[i + 1] && hash[i] == hash[i + 2] && matches.Count == 0)
                     {
-                        //if (i - 1 > -1 && hash[i] == hash[i - 1]){}
-                        //else if (i + 3 < hash.Length && hash[i] == hash[i + 3]) { }
-                        //else
-                        //{
-                            matches.Add(hash[i].ToString());
-                        //}
+                        matches.Add(hash[i].ToString());
                     }
                 }
                 
@@ -51,7 +48,7 @@
                 }
 
                 var index1 = index;
-                foreach (var candidate in _candidateKeys.Where(ck => ck.Md5Hash != hash && ck.Index > (index - 1000)))
+                foreach (var candidate in _candidateKeys.Where(ck => ck.Md5Hash != hash && !ck.IsAKey && ck.Index > (index - 1000)))
                 {
                     var rep = candidate.CharThatAppearsAsAThreeOf;
                     if (hash.Contains($"{rep}{rep}{rep}{rep}{rep}"))
@@ -68,6 +65,17 @@
                 index++;
             }
 
+            var found = _foundKeys.OrderBy(c => c.Index).Take(64);
+
+            var iterator = 1;
+
+            foreach (var key in found)
+            {
+                Console.WriteLine($"{iterator}: INDEX {key.Index}  [{key.CharThatAppearsAsAThreeOf}] HASH {key.Md5Hash}");
+                Console.WriteLine();
+                iterator++;
+            }
+
             return _foundKeys.OrderBy(ck => ck.Index).ToList()[63].Index;
         }
 
@@ -78,6 +86,26 @@
             MD5 md5 = MD5.Create();
 
             byte[] inputBytes = Encoding.ASCII.GetBytes(input);
+
+            byte[] hash = md5.ComputeHash(inputBytes);
+
+            //StringBuilder sb = new StringBuilder();
+
+            //foreach (byte t in hash)
+            //{
+            //    sb.Append(t.ToString("x2"));
+            //}
+
+            //return sb.ToString();
+
+            return ByteArrayToString(hash);
+        }
+
+        private string GenerateMd5Hash(string prevHash)
+        {
+            MD5 md5 = MD5.Create();
+
+            byte[] inputBytes = Encoding.ASCII.GetBytes(prevHash);
 
             byte[] hash = md5.ComputeHash(inputBytes);
 
