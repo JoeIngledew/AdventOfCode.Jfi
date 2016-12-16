@@ -3,7 +3,7 @@
     using System;
     using System.Collections.Generic;
 
-    // unfinished
+    // unfinished - or rather -advent of code is broken for this puzzle for me.
     public class ReindeerOlympics
     {
         public void CalculateDistancesAtTime(int secondsElapsed)

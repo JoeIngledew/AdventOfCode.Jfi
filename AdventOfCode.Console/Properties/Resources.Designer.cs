@@ -234,6 +234,18 @@ namespace AdventOfCode.Console.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Frosting: capacity 4, durability -2, flavor 0, texture 0, calories 5
+        ///Candy: capacity 0, durability 5, flavor -1, texture 0, calories 8
+        ///Butterscotch: capacity -1, durability 0, flavor 5, texture 0, calories 6
+        ///Sugar: capacity 0, durability 0, flavor -2, texture 2, calories 1.
+        /// </summary>
+        internal static string SFHPIn {
+            get {
+                return ResourceManager.GetString("SFHPIn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Disc #1 has 17 positions; at time=0, it is at position 5.
         ///Disc #2 has 19 positions; at time=0, it is at position 8.
         ///Disc #3 has 7 positions; at time=0, it is at position 1.

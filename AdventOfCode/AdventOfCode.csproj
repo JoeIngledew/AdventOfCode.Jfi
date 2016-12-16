@@ -75,6 +75,7 @@
     <Compile Include="CubicleMaze\Puzzle.cs" />
     <Compile Include="CubicleMaze\SearchParameters.cs" />
     <Compile Include="Day14\OneTimePad.cs" />
+    <Compile Include="Day152015\ScienceForHungryPeople.cs" />
     <Compile Include="Day15\ChineseRemainder.cs" />
     <Compile Include="Day15\TimingIsEverything.cs" />
     <Compile Include="Day16\DragonChecksum.cs" />
@@ -166,6 +167,7 @@
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

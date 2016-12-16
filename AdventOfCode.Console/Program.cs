@@ -8,6 +8,7 @@
     using AdventOfCode.Day14;
     using AdventOfCode.Day142015;
     using AdventOfCode.Day15;
+    using AdventOfCode.Day152015;
     using AdventOfCode.Day16;
     using AdventOfCode.Properties;
 
@@ -52,13 +53,43 @@
             //rdo.CalculateDistancesAtTime(2503);
             //Console.ReadKey();
 
-            var dc = new DragonChecksum();
-            var output = dc.GenRandomData("11100010111110100", 35651584);
-            //Console.WriteLine($"OUTPUT DATA: {output} (length {output.Length})");
+            var sfhp = new ScienceForHungryPeople();
+            sfhp.Setup(Resources.SFHPIn);
+            Console.WriteLine("Getting all possibilities...");
+            var allPossible = sfhp.GetAllPossibleRecipes();
+            Console.WriteLine($"Found all possibilities. Count: {allPossible.Count}");
+            Console.WriteLine("Finding optimal configuration...");
+            var best = sfhp.GetBestRecipe(allPossible);
+            Console.WriteLine("Best found. Recipe:");
+            foreach (var ingred in best)
+            {
+                Console.WriteLine($"{ingred.Key.Name}: {ingred.Value}");
+            }
+            var total = sfhp.GetTotalVal(best);
+
+            Console.WriteLine($"Highest total: {total}");
+
             Console.WriteLine();
-            var checksum = dc.GenChecksum(output);
-            Console.WriteLine($"CHECKSUM: {checksum} (length {checksum.Length})");
+            Console.WriteLine("Now finding optimal 500-calorie configuration...");
+            var bestWith500Cals = sfhp.GetBestRecipeWithRightCalories(allPossible, 500);
+            Console.WriteLine("Best found. Recipe:");
+            foreach (var ingred in bestWith500Cals)
+            {
+                Console.WriteLine($"{ingred.Key.Name}: {ingred.Value}");
+            }
+            var newTotal = sfhp.GetTotalVal(bestWith500Cals);
+
+            Console.WriteLine($"Highest total: {newTotal}");
+
             Console.ReadKey();
+
+            //var dc = new DragonChecksum();
+            //var output = dc.GenRandomData("11100010111110100", 35651584);
+            ////Console.WriteLine($"OUTPUT DATA: {output} (length {output.Length})");
+            //Console.WriteLine();
+            //var checksum = dc.GenChecksum(output);
+            //Console.WriteLine($"CHECKSUM: {checksum} (length {checksum.Length})");
+            //Console.ReadKey();
 
             //            var tie = new TimingIsEverything();
             //            tie.Setup(Resources.TimingIsEverthingIn);
