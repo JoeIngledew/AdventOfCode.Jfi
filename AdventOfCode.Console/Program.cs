@@ -6,7 +6,9 @@
     using AdventOfCode.Console.Properties;
     using AdventOfCode.CubicleMaze;
     using AdventOfCode.Day14;
+    using AdventOfCode.Day142015;
     using AdventOfCode.Day15;
+    using AdventOfCode.Day16;
     using AdventOfCode.Properties;
 
     class Program
@@ -43,8 +45,20 @@
             ////Console.WriteLine(otp.GetThisKey(64, "abc"));
             //Console.ReadKey();
 
-            ChineseRemainder.Execute();
-            Console.ReadLine();
+            //ChineseRemainder.Execute();
+            //Console.ReadLine();
+
+            //var rdo = new ReindeerOlympics();
+            //rdo.CalculateDistancesAtTime(2503);
+            //Console.ReadKey();
+
+            var dc = new DragonChecksum();
+            var output = dc.GenRandomData("11100010111110100", 35651584);
+            //Console.WriteLine($"OUTPUT DATA: {output} (length {output.Length})");
+            Console.WriteLine();
+            var checksum = dc.GenChecksum(output);
+            Console.WriteLine($"CHECKSUM: {checksum} (length {checksum.Length})");
+            Console.ReadKey();
 
             //            var tie = new TimingIsEverything();
             //            tie.Setup(Resources.TimingIsEverthingIn);

@@ -60,6 +60,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Day142015\ReindeerOlympics.cs" />
     <Compile Include="Abacus.cs" />
     <Compile Include="BalanceBots.cs" />
     <Compile Include="BitwiseCircuit.cs" />
@@ -76,6 +77,7 @@
     <Compile Include="Day14\OneTimePad.cs" />
     <Compile Include="Day15\ChineseRemainder.cs" />
     <Compile Include="Day15\TimingIsEverything.cs" />
+    <Compile Include="Day16\DragonChecksum.cs" />
     <Compile Include="DinnerTableHappinessOptimizer.cs" />
     <Compile Include="ElevatorFloorCalc.cs" />
     <Compile Include="ExplosivesInCyberspace.cs" />
