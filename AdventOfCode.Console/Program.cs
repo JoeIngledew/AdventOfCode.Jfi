@@ -14,6 +14,7 @@
     using AdventOfCode.Day162015;
     using AdventOfCode.Day172015;
     using AdventOfCode.Day182015;
+    using AdventOfCode.Day192015;
     using AdventOfCode.Properties;
 
     class Program
@@ -103,9 +104,14 @@
             //Console.WriteLine($"Number of combos of min count: {minCombo.Count()}");
             //Console.ReadKey();
 
-            var al = new AnimatedLights();
-            al.Setup(Resources.LightsIn);
-            Console.WriteLine($"Lights lit after 100 iterations: {al.GetLitAfterIterations(100)}");
+            //var al = new AnimatedLights();
+            //al.Setup(Resources.LightsIn);
+            //Console.WriteLine($"Lights lit after 100 iterations: {al.GetLitAfterIterations(100)}");
+            //Console.ReadKey();
+
+            var mg = new MedicineGenerator();
+            var pos = mg.GetNumberOfDistinctTransformations(Resources.MedIn);
+            Console.WriteLine($"Distinct permutations: {pos}");
             Console.ReadKey();
 
             //var dc = new DragonChecksum();

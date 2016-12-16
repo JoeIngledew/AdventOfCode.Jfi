@@ -163,6 +163,57 @@ namespace AdventOfCode.Console.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Al =&gt; ThF
+        ///Al =&gt; ThRnFAr
+        ///B =&gt; BCa
+        ///B =&gt; TiB
+        ///B =&gt; TiRnFAr
+        ///Ca =&gt; CaCa
+        ///Ca =&gt; PB
+        ///Ca =&gt; PRnFAr
+        ///Ca =&gt; SiRnFYFAr
+        ///Ca =&gt; SiRnMgAr
+        ///Ca =&gt; SiTh
+        ///F =&gt; CaF
+        ///F =&gt; PMg
+        ///F =&gt; SiAl
+        ///H =&gt; CRnAlAr
+        ///H =&gt; CRnFYFYFAr
+        ///H =&gt; CRnFYMgAr
+        ///H =&gt; CRnMgYFAr
+        ///H =&gt; HCa
+        ///H =&gt; NRnFYFAr
+        ///H =&gt; NRnMgAr
+        ///H =&gt; NTh
+        ///H =&gt; OB
+        ///H =&gt; ORnFAr
+        ///Mg =&gt; BF
+        ///Mg =&gt; TiMg
+        ///N =&gt; CRnFAr
+        ///N =&gt; HSi
+        ///O =&gt; CRnFYFAr
+        ///O =&gt; CRnMgAr
+        ///O =&gt; HP
+        ///O =&gt; NRnFAr
+        ///O =&gt; OTi
+        ///P =&gt; CaP
+        ///P =&gt; PTi
+        ///P =&gt; SiRnFAr
+        ///Si =&gt; CaSi
+        ///Th =&gt; ThCa
+        ///Ti =&gt; BP
+        ///Ti =&gt; TiTi
+        ///e =&gt; HF
+        ///e =&gt; NAl
+        ///e [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string MedIn {
+            get {
+                return ResourceManager.GetString("MedIn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to wxupppln
         ///ducindyd
         ///rhszlyfu

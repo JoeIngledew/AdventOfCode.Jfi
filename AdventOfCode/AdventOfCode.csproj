@@ -82,6 +82,8 @@
     <Compile Include="Day16\DragonChecksum.cs" />
     <Compile Include="Day172015\NoSuchThingAsTooMuch.cs" />
     <Compile Include="Day182015\AnimatedLights.cs" />
+    <Compile Include="Day192015\MedicineGenerator.cs" />
+    <Compile Include="Day202015\InfiniteElvesInfiniteHouses.cs" />
     <Compile Include="DinnerTableHappinessOptimizer.cs" />
     <Compile Include="ElevatorFloorCalc.cs" />
     <Compile Include="ExplosivesInCyberspace.cs" />
