@@ -13,6 +13,7 @@
     using AdventOfCode.Day16;
     using AdventOfCode.Day162015;
     using AdventOfCode.Day172015;
+    using AdventOfCode.Day182015;
     using AdventOfCode.Properties;
 
     class Program
@@ -90,16 +91,21 @@
             //Console.WriteLine(was.FindAunt(Resources.AuntsIn));
             //Console.ReadKey();
 
-            var nstatm = new NoSuchThingAsTooMuch();
-            var combos = nstatm.FindAllCombinationsOfContainersToFit(150);
-            Console.WriteLine($"Count of combinations: {combos.Count}");
-            var minCombo = combos.Where(m => m.Count == combos.Min(j => j.Count));
-            Console.WriteLine($"Min containers: {combos.Min(c => c.Count)}");
-            //foreach (var cont in minCombo)
-            //{
-            //    Console.Write($"{cont},");
-            //}
-            Console.WriteLine($"Number of combos of min count: {minCombo.Count()}");
+            //var nstatm = new NoSuchThingAsTooMuch();
+            //var combos = nstatm.FindAllCombinationsOfContainersToFit(150);
+            //Console.WriteLine($"Count of combinations: {combos.Count}");
+            //var minCombo = combos.Where(m => m.Count == combos.Min(j => j.Count));
+            //Console.WriteLine($"Min containers: {combos.Min(c => c.Count)}");
+            ////foreach (var cont in minCombo)
+            ////{
+            ////    Console.Write($"{cont},");
+            ////}
+            //Console.WriteLine($"Number of combos of min count: {minCombo.Count()}");
+            //Console.ReadKey();
+
+            var al = new AnimatedLights();
+            al.Setup(Resources.LightsIn);
+            Console.WriteLine($"Lights lit after 100 iterations: {al.GetLitAfterIterations(100)}");
             Console.ReadKey();
 
             //var dc = new DragonChecksum();

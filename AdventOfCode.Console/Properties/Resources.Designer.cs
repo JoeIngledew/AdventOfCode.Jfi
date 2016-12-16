@@ -149,6 +149,20 @@ namespace AdventOfCode.Console.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to #..####.##..#...#..#...#...###.#.#.#..#....#.##..#...##...#..#.....##..#####....#.##..##....##.#....
+        ///.#..#..#..#.###...##..#.##.....#...#..##....#####.##............####.#..######..#.#.##.#...#..#...##
+        ///#.....##.##.##.#..##.#..###...#.#.#..##..###.####.####.#.####.#...##.#..###.........#.###...#....###
+        ///#.###..#######..##..#.....##.#.#.###.#.##..#.##..##.##.#.##...###.#...#.#####.#.##..#.#####..#.#####
+        ///#.##.##.###.##..###.#.##.##...##.#.#..##..###.########.#.####..####...#####...#..#...##....##.##.##.
+        ///.. [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string LightsIn {
+            get {
+                return ResourceManager.GetString("LightsIn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to wxupppln
         ///ducindyd
         ///rhszlyfu
