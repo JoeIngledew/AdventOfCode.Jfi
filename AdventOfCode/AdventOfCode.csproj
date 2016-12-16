@@ -78,7 +78,9 @@
     <Compile Include="Day152015\ScienceForHungryPeople.cs" />
     <Compile Include="Day15\ChineseRemainder.cs" />
     <Compile Include="Day15\TimingIsEverything.cs" />
+    <Compile Include="Day162015\WhichAuntSue.cs" />
     <Compile Include="Day16\DragonChecksum.cs" />
+    <Compile Include="Day172015\NoSuchThingAsTooMuch.cs" />
     <Compile Include="DinnerTableHappinessOptimizer.cs" />
     <Compile Include="ElevatorFloorCalc.cs" />
     <Compile Include="ExplosivesInCyberspace.cs" />

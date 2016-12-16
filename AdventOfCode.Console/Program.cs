@@ -1,6 +1,7 @@
 ﻿namespace AdventOfCode.Console
 {
     using System;
+    using System.Linq;
     using System.Text;
 
     using AdventOfCode.Console.Properties;
@@ -10,6 +11,8 @@
     using AdventOfCode.Day15;
     using AdventOfCode.Day152015;
     using AdventOfCode.Day16;
+    using AdventOfCode.Day162015;
+    using AdventOfCode.Day172015;
     using AdventOfCode.Properties;
 
     class Program
@@ -53,34 +56,50 @@
             //rdo.CalculateDistancesAtTime(2503);
             //Console.ReadKey();
 
-            var sfhp = new ScienceForHungryPeople();
-            sfhp.Setup(Resources.SFHPIn);
-            Console.WriteLine("Getting all possibilities...");
-            var allPossible = sfhp.GetAllPossibleRecipes();
-            Console.WriteLine($"Found all possibilities. Count: {allPossible.Count}");
-            Console.WriteLine("Finding optimal configuration...");
-            var best = sfhp.GetBestRecipe(allPossible);
-            Console.WriteLine("Best found. Recipe:");
-            foreach (var ingred in best)
-            {
-                Console.WriteLine($"{ingred.Key.Name}: {ingred.Value}");
-            }
-            var total = sfhp.GetTotalVal(best);
+            //var sfhp = new ScienceForHungryPeople();
+            //sfhp.Setup(Resources.SFHPIn);
+            //Console.WriteLine("Getting all possibilities...");
+            //var allPossible = sfhp.GetAllPossibleRecipes();
+            //Console.WriteLine($"Found all possibilities. Count: {allPossible.Count}");
+            //Console.WriteLine("Finding optimal configuration...");
+            //var best = sfhp.GetBestRecipe(allPossible);
+            //Console.WriteLine("Best found. Recipe:");
+            //foreach (var ingred in best)
+            //{
+            //    Console.WriteLine($"{ingred.Key.Name}: {ingred.Value}");
+            //}
+            //var total = sfhp.GetTotalVal(best);
 
-            Console.WriteLine($"Highest total: {total}");
+            //Console.WriteLine($"Highest total: {total}");
 
-            Console.WriteLine();
-            Console.WriteLine("Now finding optimal 500-calorie configuration...");
-            var bestWith500Cals = sfhp.GetBestRecipeWithRightCalories(allPossible, 500);
-            Console.WriteLine("Best found. Recipe:");
-            foreach (var ingred in bestWith500Cals)
-            {
-                Console.WriteLine($"{ingred.Key.Name}: {ingred.Value}");
-            }
-            var newTotal = sfhp.GetTotalVal(bestWith500Cals);
+            //Console.WriteLine();
+            //Console.WriteLine("Now finding optimal 500-calorie configuration...");
+            //var bestWith500Cals = sfhp.GetBestRecipeWithRightCalories(allPossible, 500);
+            //Console.WriteLine("Best found. Recipe:");
+            //foreach (var ingred in bestWith500Cals)
+            //{
+            //    Console.WriteLine($"{ingred.Key.Name}: {ingred.Value}");
+            //}
+            //var newTotal = sfhp.GetTotalVal(bestWith500Cals);
 
-            Console.WriteLine($"Highest total: {newTotal}");
+            //Console.WriteLine($"Highest total: {newTotal}");
 
+            //Console.ReadKey();
+
+            //var was = new WhichAuntSue();
+            //Console.WriteLine(was.FindAunt(Resources.AuntsIn));
+            //Console.ReadKey();
+
+            var nstatm = new NoSuchThingAsTooMuch();
+            var combos = nstatm.FindAllCombinationsOfContainersToFit(150);
+            Console.WriteLine($"Count of combinations: {combos.Count}");
+            var minCombo = combos.Where(m => m.Count == combos.Min(j => j.Count));
+            Console.WriteLine($"Min containers: {combos.Min(c => c.Count)}");
+            //foreach (var cont in minCombo)
+            //{
+            //    Console.Write($"{cont},");
+            //}
+            Console.WriteLine($"Number of combos of min count: {minCombo.Count()}");
             Console.ReadKey();
 
             //var dc = new DragonChecksum();

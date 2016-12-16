@@ -61,6 +61,26 @@ namespace AdventOfCode.Console.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Sue 1: cars: 9, akitas: 3, goldfish: 0
+        ///Sue 2: akitas: 9, children: 3, samoyeds: 9
+        ///Sue 3: trees: 6, cars: 6, children: 4
+        ///Sue 4: trees: 4, vizslas: 4, goldfish: 9
+        ///Sue 5: akitas: 9, vizslas: 7, cars: 5
+        ///Sue 6: vizslas: 6, goldfish: 6, akitas: 3
+        ///Sue 7: pomeranians: 5, samoyeds: 0, perfumes: 10
+        ///Sue 8: cars: 10, pomeranians: 7, goldfish: 8
+        ///Sue 9: trees: 2, vizslas: 7, samoyeds: 6
+        ///Sue 10: perfumes: 5, pomeranians: 4, children: 9
+        ///Sue 11: vizslas: 5, perfumes: 8, cars: 10
+        ///Sue 12: children: 10, cars: 6, per [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string AuntsIn {
+            get {
+                return ResourceManager.GetString("AuntsIn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to bot 147 gives low to bot 67 and high to bot 71
         ///bot 142 gives low to bot 128 and high to bot 164
         ///bot 47 gives low to bot 4 and high to bot 209
