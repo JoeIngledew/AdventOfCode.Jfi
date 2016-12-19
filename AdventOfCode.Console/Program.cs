@@ -13,7 +13,9 @@
     using AdventOfCode.Day16;
     using AdventOfCode.Day162015;
     using AdventOfCode.Day172015;
+    using AdventOfCode.Day18;
     using AdventOfCode.Day182015;
+    using AdventOfCode.Day19;
     using AdventOfCode.Day192015;
     using AdventOfCode.Properties;
 
@@ -55,7 +57,7 @@
             //Console.ReadLine();
 
             //var rdo = new ReindeerOlympics();
-            //rdo.CalculateDistancesAtTime(2503);
+            //rdo.CalculateDistancesAtTime(2503, Resources.RdsIn);
             //Console.ReadKey();
 
             //var sfhp = new ScienceForHungryPeople();
@@ -104,15 +106,22 @@
             //Console.WriteLine($"Number of combos of min count: {minCombo.Count()}");
             //Console.ReadKey();
 
-            //var al = new AnimatedLights();
-            //al.Setup(Resources.LightsIn);
-            //Console.WriteLine($"Lights lit after 100 iterations: {al.GetLitAfterIterations(100)}");
+            var al = new AnimatedLights();
+            al.Setup(Resources.LightsIn);
+            Console.WriteLine($"Lights lit after 100 iterations: {al.Part2(100)}");
+            Console.ReadKey();
+
+            //var mg = new MedicineGenerator();
+            //var pos = mg.GetNumberOfDistinctTransformations(Resources.MedIn);
+            //Console.WriteLine($"Distinct permutations: {pos}");
             //Console.ReadKey();
 
-            var mg = new MedicineGenerator();
-            var pos = mg.GetNumberOfDistinctTransformations(Resources.MedIn);
-            Console.WriteLine($"Distinct permutations: {pos}");
-            Console.ReadKey();
+            //var lar = new LikeARouge();
+            //lar.Setup();
+            //Console.WriteLine($"Safe tiles: {lar.GetNumberOfSafeTiles()}");
+
+            //var we = new WhiteElephant(3004953);
+            //we.Solve();
 
             //var dc = new DragonChecksum();
             //var output = dc.GenRandomData("11100010111110100", 35651584);
