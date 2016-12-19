@@ -17,7 +17,10 @@
     using AdventOfCode.Day182015;
     using AdventOfCode.Day19;
     using AdventOfCode.Day192015;
+    using AdventOfCode.Day202015;
     using AdventOfCode.Properties;
+
+    using Xunit.Sdk;
 
     class Program
     {
@@ -104,17 +107,23 @@
             ////    Console.Write($"{cont},");
             ////}
             //Console.WriteLine($"Number of combos of min count: {minCombo.Count()}");
-            //Console.ReadKey();
+            ////Console.ReadKey();
 
-            var al = new AnimatedLights();
-            al.Setup(Resources.LightsIn);
-            Console.WriteLine($"Lights lit after 100 iterations: {al.Part2(100)}");
-            Console.ReadKey();
+            //var al = new AnimatedLights();
+            //al.Setup(Resources.LightsIn);
+            //Console.WriteLine($"Lights lit after 100 iterations: {al.Part2(100)}");
+            //Console.ReadKey();
 
             //var mg = new MedicineGenerator();
-            //var pos = mg.GetNumberOfDistinctTransformations(Resources.MedIn);
-            //Console.WriteLine($"Distinct permutations: {pos}");
+            ////var pos = mg.GetNumberOfDistinctTransformations(Resources.MedIn);
+            ////Console.WriteLine($"Distinct permutations: {pos}");
+            //var minStepsToMakeMoleculeFromE = mg.GetMinStepsFrom("e", Resources.MedIn);
+            //Console.WriteLine($"STEPS: {minStepsToMakeMoleculeFromE}");
             //Console.ReadKey();
+
+            var ieih = new InfiniteElvesInfiniteHouses();
+            ieih.GetLowestHouseNumberToGetAtLeastThisManyPresents(36000000);
+            Console.ReadKey();
 
             //var lar = new LikeARouge();
             //lar.Setup();
