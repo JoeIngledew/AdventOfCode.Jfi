@@ -17,6 +17,7 @@
     using AdventOfCode.Day182015;
     using AdventOfCode.Day19;
     using AdventOfCode.Day192015;
+    using AdventOfCode.Day20;
     using AdventOfCode.Day202015;
     using AdventOfCode.Properties;
 
@@ -121,9 +122,14 @@
             //Console.WriteLine($"STEPS: {minStepsToMakeMoleculeFromE}");
             //Console.ReadKey();
 
-            var ieih = new InfiniteElvesInfiniteHouses();
-            ieih.GetLowestHouseNumberToGetAtLeastThisManyPresents(36000000);
-            Console.ReadKey();
+            //var ieih = new InfiniteElvesInfiniteHouses();
+            //ieih.GetLowestHouseNumberToGetAtLeastThisManyPresents(36000000);
+            //Console.ReadKey();
+
+            var ir = new IpRanges();
+
+            ir.RemoveInvalidRanges(Resources.IpRangesIn);
+            Console.WriteLine($"MIN: {ir.GetMin()}");
 
             //var lar = new LikeARouge();
             //lar.Setup();

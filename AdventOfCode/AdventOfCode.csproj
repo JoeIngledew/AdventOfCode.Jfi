@@ -87,6 +87,7 @@
     <Compile Include="Day192015\MedicineGenerator.cs" />
     <Compile Include="Day19\WhiteElephant.cs" />
     <Compile Include="Day202015\InfiniteElvesInfiniteHouses.cs" />
+    <Compile Include="Day20\IpRanges.cs" />
     <Compile Include="DinnerTableHappinessOptimizer.cs" />
     <Compile Include="ElevatorFloorCalc.cs" />
     <Compile Include="ExplosivesInCyberspace.cs" />
